@@ -104,8 +104,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 							
 							//データの中身出力
 							StringBuilder sb = new StringBuilder();
-							for (double d : FFTdata) {
+							/*for (double d : FFTdata) {
 								sb.append(d);
+								sb.append(" ");
+							}*/
+							for (short s : buf) {
+								sb.append(s);
 								sb.append(" ");
 							}
 							labelText = sb.toString();

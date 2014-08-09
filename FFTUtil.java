@@ -12,6 +12,7 @@ public class FFTUtil {
   int[] indices;
   int fftSize;
   int halfSize;
+  int nLevel;
 
   public FFTUtil(int length){
     System.out.println(length);
@@ -83,6 +84,7 @@ public class FFTUtil {
     while(i < MAX_I) {
       int power = (int)Math.pow(2.0, (double)i);
       if (length <= power) {
+        this.nLevel = i;
         return power;
       }
       ++i;
